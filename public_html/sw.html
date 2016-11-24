@@ -1,0 +1,47 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>WATER SATURATION</title>
+        <link rel="stylesheet" href="style/main-style.css">
+        <link rel="stylesheet" href="style/recipe-style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    </head>
+    <body id="page5">
+        <div id="header"></div>
+        <main>
+            <div class="info-box">
+                <h1>Water Saturation (Sw) Calculation</h1>
+            </div>
+            <div id="aside"></div>
+            <section id="recipe_above">
+                <figure>
+                    <img src="img/tigercake_recipe_page/tigerkaka.jpg" alt="tiger cake">
+                    <h2>Water Saturation (Sw) Calculation</h2>
+                   
+                </figure>
+                <h2>Water Saturation (Sw) Calculation</h2>
+                <p id="select_a_portion">Select a portion </p>
+                <input id="quantity" type="range" min="1" max="8" step="1" onload="displaySlider(); changePortion(5)" oninput="changePortion(5)">
+                <p id="selectedPortion"></p>
+                <ul id="ingredients">
+                    <li id="smor_tk"></li>
+                    <li id="socker_tk"></li>
+                    <li id="egg_tk"></li>
+                    <li id="flour_tk"></li>
+                    <li id="bp_tk"></li>
+                    <li id="salt_tk"></li>
+                    <li id="milk_tk"></li>
+                    <li id="kakao_tk"></li>
+                </ul>
+            </section>
+            
+        </main>
+        <div id="footer"></div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
