@@ -27,15 +27,18 @@
                 <figure>                    
                     <h2>Calculate Volume of shale, Vsh, in the potential hydrocarbon formation zones.</h2>
                     <p>Input Gamma Readings</p>
-                    <input type="number" id="gammalog" min="0" max="100" step="10" value="0">
+                    <input type="number" id="gammalog" min="0" max="100" step="5" value="0">
                     <p>Input minimum gamma reading</p>
-                    <input type="number" id="mingammalog" min="0" max="100" step="10" value="0">
+                    <input type="number" id="mingammalog" min="0" max="100" step="5" value="0">
                     <p>Input highest gamma reading</p>
-                    <input type="number" id="higgammalog" min="0" max="100" step="10" value="0">
+                    <input type="number" id="higgammalog" min="0" max="100" step="5" value="0">
+                    <p>What depth</p>
+                    <input type="number" id="depthValue" min="616" max="675" step="2" value="0">
                     <br>
-                    <button onclick="myFunction()">calculate</button>
+                    <button onclick="shaleFunction()">calculate</button>
                     <p id="select_a_portion"><strong>Volume of shale (Vsh):</strong> </p>
                     <p id="shale"></p>
+                    <p>at depth</p> <p id="depth"></p>
                 </figure>
                 <img src="Shale_volume_formula.png" alt="Shale Volume formula">
                 <h2>Shale Volume formula.</h2>
