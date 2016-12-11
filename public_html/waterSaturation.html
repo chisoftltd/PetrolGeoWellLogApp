@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <title>WATER SATURATION</title>
-        <link rel="stylesheet" href="style/main-style.css">
-        <link rel="stylesheet" href="style/recipe-style.css">
+        <link rel="stylesheet" href="css/main-style.css">
+        <link rel="stylesheet" href="css/welllog-style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     </head>
@@ -20,28 +20,29 @@
             <div id="aside"></div>
             <section id="recipe_above">
                 <figure>
-                    <img src="img/tigercake_recipe_page/tigerkaka.jpg" alt="tiger cake">
+                    <img src="Water Saturation.png" alt="Water Saturation">
                     <h2>Water Saturation (Sw) Calculation</h2>
-                   
                 </figure>
                 <h2>Water Saturation (Sw) Calculation</h2>
-                <p id="select_a_portion">Select a portion </p>
-                <input id="quantity" type="range" min="1" max="8" step="1" onload="displaySlider(); changePortion(5)" oninput="changePortion(5)">
-                <p id="selectedPortion"></p>
-                <ul id="ingredients">
-                    <li id="smor_tk"></li>
-                    <li id="socker_tk"></li>
-                    <li id="egg_tk"></li>
-                    <li id="flour_tk"></li>
-                    <li id="bp_tk"></li>
-                    <li id="salt_tk"></li>
-                    <li id="milk_tk"></li>
-                    <li id="kakao_tk"></li>
-                </ul>
+                <p>Porosity</p>
+                <input type="number" id="porosity" min="0" max="1" step="0.01" value="0">
+                <p>Water Resistivity</p>
+                <input type="number" id="waterRe" min="0" max="1" step="0.001" value="0">
+                <p>True Resistivity</p>
+                <input type="number" id="trueRe" min="0.2" max="2000" step="0.1" value="0">
+                <p>Tortursity factor (a)</p>
+                <input type="number" id="tortursity" min="0" max="5" step="0.1" value="0">
+                <p><strong>m = n = 2</strong></p>
+                <button onclick="waterFunction()">calculate</button>
+                <p id="select_a_portion"><strong>Water Saturation (Sw):</strong> </p>
+                <p id="water"></p>
+                <img src="Water Saturation formula.png" alt="Water Saturation formula">
+                <h2>Water Saturation formula</h2>
             </section>
-            
+
         </main>
         <div id="footer"></div>
         <script type="text/javascript" src="js/script.js"></script>
+     
     </body>
 </html>

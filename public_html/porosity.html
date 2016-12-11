@@ -4,43 +4,58 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
-      <meta charset="utf-8">
+        <meta charset="utf-8">
         <title>POROSITY CALCULATION</title>
-    <link rel="stylesheet" href="css/main-style.css">
-    <link rel="stylesheet" href="css/recipe-style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/main-style.css">
+        <link rel="stylesheet" href="css/welllog-style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     </head>
     <body id="page4">
-<div id="header"></div>
-<main>
-    <div class="info-box">
-        <h1>Porosity Calculation</h1>
-    </div>
-    <div id="aside"></div>
-    <section id="recipe_above">
-        <figure>
-            <img src="img/vlt.jpg" alt="Porosity Calculation">
-            <h2><Strong>Porosity Calculation</Strong></h2>
-        </figure>
-        <h2>Porosity Calculation</h2>
-        <p id="select_a_portion">Select a portion </p>
-        <input id="quantity" type="range" min="1" max="8" step="1" onload="displaySlider(); changePortion(4)" oninput="changePortion(4)">
-        <p id="selectedPortion"></p>
-        <ul id="ingredients">
-            <li id="egg_white"></li>
-            <li id="kakao"></li>
-            <li id="strosocker"></li>
-            <li id="hasselnotter"></li>
-            <li id="mandelspan"></li>
-            <li id="eggyolk_vl"></li>
-            <li id="gradde_vl"></li>
-            <li id="socker_kram_vl"></li>
-            <li id="smor_vl"></li>
-        </ul>
-    </section>
-</main>
-<div id="footer"></div>
-<script type="text/javascript" src="js/script.js"></script>
-</body>
+        <div id="header"></div>
+        <main>
+            <div class="info-box">
+                <h1>Porosity Calculation</h1>
+            </div>
+            <div id="aside"></div>
+            <section id="recipe_above">
+                <figure>
+                    <img src="Porosity calculation with density.png" alt="Porosity calculation with density">
+                    <h2><Strong>Density Porosity Calculation</Strong></h2>
+                </figure>
+                <figure>
+                    <img src="Porosity calculation with sonic.png" alt="Porosity calculation with sonic">
+                    <h2><Strong>Sonic Porosity Calculation</Strong></h2>
+                </figure>
+                <h2>Porosity Calculation with density formula</h2>
+                <p>Matrix Density</p>
+                <input type="number" id="matrix" min="1.95" max="2.95" step="1" value="0">
+                <p>Bulk Density</p>
+                <input type="number" id="bulk" min="1.95" max="2.95" step="1" value="0">
+                <p>Fluid Density</p>
+                <input type="number" id="fluid" min="1.95" max="2.95" step="1" value="0">
+                <br>
+                <button onclick="densityFunction()">calculate</button>
+                <p id="select_a_portion"><strong>Density Porosity :</strong> </p>
+                <p id="density"></p>
+                
+                <img src="Porosity calculation with density formula.png" alt="Porosity calculation with density formula">
+                <h2>Porosity calculation with sonic formula</h2>
+                <p>Internal Transit Time from sonic log</p>
+                <input type="number" id="soniclog" min="40" max="140" step="10" value="0">
+                <p>Internal Transit Time of the matrix</p>
+                <input type="number" id="matrixlog" min="40" max="140" step="10" value="0">
+                <p>Internal Transit Time of the measurement t zones</p>
+                <input type="number" id="measurement" min="40" max="140" step="10" value="0">
+                <br>
+                <button onclick="sonicFunction()">calculate</button>
+                <p id="select_a_portion"><strong>Sonic Porosity :</strong> </p>
+                <p id="sonic"></p>
+                <img src="Porosity calculation with sonic formula.png" alt="Porosity calculation with sonic formula">
+                <h2>Porosity calculation with sonic formula</h2>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 </html>

@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <title>SHALE VOLUME CALCULATION</title>
         <link rel="stylesheet" href="css/main-style.css">
-        <link rel="stylesheet" href="style/recipe-style.css">
+        <link rel="stylesheet" href="css/welllog-style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     </head>
@@ -24,17 +24,21 @@
                     <img src="Shale_volume.png" alt="Shale Volume Calculation">
                     <h2>Potential hydrocarbon formation zones.</h2>
                 </figure>
-
-                <h2>Calculate Volume of shale, Vsh, in the potential hydrocarbon formation zones.</h2>
-                <p id="select_a_portion">Select Gamma Readings </p>
-                <input id="quantity" type="range" min="0" max="100" step="5" onload="displaySlider(); changePortion(5)" oninput="changePortion(5)">
-                <p id="selectedPortion"></p>
-                <ul id="ingredients">
-                    <li id="egg_yolk"></li>
-                    <li id="milk"></li>
-                    <li id="sugar"></li>
-                    <li id="heavy_cream"></li>
-                </ul>
+                <figure>                    
+                    <h2>Calculate Volume of shale, Vsh, in the potential hydrocarbon formation zones.</h2>
+                    <p>Input Gamma Readings</p>
+                    <input type="number" id="gammalog" min="0" max="100" step="10" value="0">
+                    <p>Input minimum gamma reading</p>
+                    <input type="number" id="mingammalog" min="0" max="100" step="10" value="0">
+                    <p>Input highest gamma reading</p>
+                    <input type="number" id="higgammalog" min="0" max="100" step="10" value="0">
+                    <br>
+                    <button onclick="myFunction()">calculate</button>
+                    <p id="select_a_portion"><strong>Volume of shale (Vsh):</strong> </p>
+                    <p id="shale"></p>
+                </figure>
+                <img src="Shale_volume_formula.png" alt="Shale Volume formula">
+                <h2>Shale Volume formula.</h2>
             </section>
         </main>
         <div id="footer"></div>

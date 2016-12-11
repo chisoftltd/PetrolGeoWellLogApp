@@ -18,32 +18,6 @@ input[type=radio] + label {
     display:inline-block;
     width: 32px;
     height: 32px;
-    background: url(../img/star_grey.png) left center no-repeat;
-}
-
-.stars {
-	display: none;
-}
-
-.ratingForm {
-	display: flex;
-	align-items: center;
-	margin-top: 10px;
-	font-size: 20px;
-}
-
-.ratingForm img {
-	width: 30px;
-	height: 30px;
-}
-
-.ratingForm span {
-	color: pink;
-	margin-left: 10px;
-}
-
-#recipe_bottom {
-	margin-left: 320px;
 }
 
 figure  {
@@ -83,19 +57,6 @@ figure  {
     font-weight: bold;
 }
 
-#ingredients {
-    margin: 10px;
-    line-height: 200%;
-    list-style-image: url("../img/check.png");
-}
-
-#ingredients li {
-    list-style-position: inside;
-}
-
-#select_a_portion, #selectedPortion {
-	margin: 10px;
-}
 
 #main_ol {
 	margin: 15px 0;
