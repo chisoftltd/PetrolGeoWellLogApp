@@ -45,6 +45,8 @@ function shaleFunction() {
     var gammalog = document.getElementById("gammalog").value;
     var mingammalog = document.getElementById("mingammalog").value;
     var higgammalog = document.getElementById("higgammalog").value;
+    var depth = document.getElementById("depthValue").value;
+    document.getElementById("depth").innerHTML = depth;
     document.getElementById("shale").innerHTML = ((gammalog - mingammalog) / (higgammalog * mingammalog));
 }
 
